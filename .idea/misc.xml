@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Kuliah/Tugas Kuliah/Pemrograman Perangkat Bergerak/Finash/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2046875" />
+        <entry key="..\:/Kuliah/Tugas Kuliah/Pemrograman Perangkat Bergerak/Finash/app/src/main/res/drawable/ic_date_range.xml" value="0.2046875" />
+        <entry key="..\:/Kuliah/Tugas Kuliah/Pemrograman Perangkat Bergerak/Finash/app/src/main/res/drawable/ic_income.xml" value="0.2046875" />
+        <entry key="..\:/Kuliah/Tugas Kuliah/Pemrograman Perangkat Bergerak/Finash/app/src/main/res/layout/activity_create.xml" value="0.25" />
+        <entry key="..\:/Kuliah/Tugas Kuliah/Pemrograman Perangkat Bergerak/Finash/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/Kuliah/Tugas Kuliah/Pemrograman Perangkat Bergerak/Finash/app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="..\:/Kuliah/Tugas Kuliah/Pemrograman Perangkat Bergerak/Finash/app/src/main/res/layout/activity_splash.xml" value="0.22" />
+        <entry key="..\:/Kuliah/Tugas Kuliah/Pemrograman Perangkat Bergerak/Finash/app/src/main/res/layout/activity_transaction.xml" value="0.25" />
+        <entry key="..\:/Kuliah/Tugas Kuliah/Pemrograman Perangkat Bergerak/Finash/app/src/main/res/layout/adapter_category.xml" value="0.18854166666666666" />
+        <entry key="..\:/Kuliah/Tugas Kuliah/Pemrograman Perangkat Bergerak/Finash/app/src/main/res/layout/adapter_transaction.xml" value="0.5" />
+        <entry key="..\:/Kuliah/Tugas Kuliah/Pemrograman Perangkat Bergerak/Finash/app/src/main/res/layout/fragment_avatar.xml" value="0.33" />
+        <entry key="..\:/Kuliah/Tugas Kuliah/Pemrograman Perangkat Bergerak/Finash/app/src/main/res/layout/fragment_date.xml" value="0.20416666666666666" />
+        <entry key="..\:/Kuliah/Tugas Kuliah/Pemrograman Perangkat Bergerak/Finash/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
+        <entry key="..\:/Kuliah/Tugas Kuliah/Pemrograman Perangkat Bergerak/Finash/app/src/main/res/layout/home_avatar.xml" value="0.25" />
+        <entry key="..\:/Kuliah/Tugas Kuliah/Pemrograman Perangkat Bergerak/Finash/app/src/main/res/layout/home_dashborad.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

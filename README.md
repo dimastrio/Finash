@@ -1,0 +1,2 @@
+# Finash
+ Aplikasi Pencatat Keuangan
