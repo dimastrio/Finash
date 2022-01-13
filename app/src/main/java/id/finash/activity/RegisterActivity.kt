@@ -3,12 +3,11 @@ package id.finash.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import id.finash.R
-import id.finash.databinding.ActivityLoginBinding
+import id.finash.databinding.ActivityRegisterBinding
 
-class LoginActivity : BaseActivity() {
+class RegisterActivity : BaseActivity() {
 
-    private val binding by lazy { ActivityLoginBinding.inflate(layoutInflater)}
+    private val binding by lazy { ActivityRegisterBinding.inflate(layoutInflater)}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,9 +16,10 @@ class LoginActivity : BaseActivity() {
     }
 
     private fun setupListener(){
-        binding.textRegister.setOnClickListener {
-            startActivity(Intent(this,RegisterActivity::class.java))
+        binding.textLogin.setOnClickListener {
+            startActivity(Intent(this,LoginActivity::class.java))
             finish()
         }
+
     }
 }

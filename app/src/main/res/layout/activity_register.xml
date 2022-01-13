@@ -4,18 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.LoginActivity"
-    android:padding="20dp">
+    tools:context=".activity.RegisterActivity">
 
     <TextView
         android:id="@+id/label_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome!"
+        android:text="Sign up!"
         android:textSize="45sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="80dp"
         android:layout_marginStart="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -25,13 +24,44 @@
         android:id="@+id/label_subtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign in to continue"
+        android:text="Get started by "
         android:textSize="25sp"
         android:textColor="@color/grey"
         android:layout_marginTop="10dp"
         android:layout_marginStart="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/label_title"
+        />
+
+    <TextView
+        android:id="@+id/label_subtitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="creating your account"
+        android:textSize="25sp"
+        android:textColor="@color/grey"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_subtitle"
+        />
+
+
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Your Name"
+        android:textSize="20sp"
+        android:textColor="@color/grey"
+        android:background="@drawable/border_edit"
+        android:padding="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:drawableStart="@drawable/ic_person"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_subtitle2"
         />
 
     <EditText
@@ -43,13 +73,15 @@
         android:textColor="@color/grey"
         android:background="@drawable/border_edit"
         android:padding="15dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:drawableStart="@drawable/ic_person"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label_subtitle"
+        app:layout_constraintTop_toBottomOf="@id/edit_name"
         />
+
+
 
     <EditText
         android:id="@+id/edit_password"
@@ -75,7 +107,7 @@
         android:id="@+id/text_alert"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login Gagal!  Username atau password salah"
+        android:text="Username sudah digunakan!"
         android:textSize="12sp"
         android:textStyle="bold"
         android:layout_marginTop="15dp"
@@ -87,10 +119,10 @@
         />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_login"
-        android:layout_width="match_parent"
+        android:id="@+id/button_register"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Sign In"
+        android:text="Sign up"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:padding="17dp"
@@ -116,35 +148,35 @@
         android:layout_marginEnd="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label_register"
+        app:layout_constraintTop_toBottomOf="@id/label_login"
         />
 
     <TextView
-        android:id="@+id/label_register"
-        android:layout_width="160dp"
+        android:id="@+id/label_login"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:text="Don't have an account ? "
+        android:text="Already have an account ? "
         android:textColor="@color/white"
         android:textSize="15sp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_login"
+        app:layout_constraintTop_toBottomOf="@id/button_register"
         />
 
     <TextView
-        android:id="@+id/text_register"
+        android:id="@+id/text_login"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:text="Sign Up "
+        android:text="Sign In "
         android:textColor="@color/blue"
         android:textStyle="bold"
         android:textSize="15sp"
         android:layout_marginTop="15dp"
-        app:layout_constraintStart_toEndOf="@id/label_register"
-        app:layout_constraintTop_toBottomOf="@id/button_login"
+        android:layout_marginEnd="70dp"
+        app:layout_constraintStart_toEndOf="@id/label_login"
+        app:layout_constraintTop_toBottomOf="@id/button_register"
         />
-
 
 
 

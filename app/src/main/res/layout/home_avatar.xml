@@ -11,7 +11,7 @@
         android:id="@+id/image_avatar"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/avatar3"
+        tools:src="@drawable/avatar3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
     </ImageView>
@@ -32,7 +32,7 @@
         android:id="@+id/text_avatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dimas Satrio"
+        tools:text="Dimas Satrio"
         android:textSize="28sp"
         android:textColor="@color/white"
         android:layout_margin="10dp"
