@@ -9,6 +9,8 @@ import id.finash.model.Category
 import id.finash.databinding.ActivityHomeBinding
 import id.finash.databinding.HomeAvatarBinding
 import id.finash.databinding.HomeDashboradBinding
+import id.finash.preference.PreferencesManager
+import id.finash.util.PrefUtil
 
 class HomeActivity : BaseActivity() {
 
@@ -17,6 +19,7 @@ class HomeActivity : BaseActivity() {
     private lateinit var bindingDashboard: HomeDashboradBinding
 
     private val db by lazy { Firebase.firestore }
+    private val pref by lazy { PreferencesManager(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +32,12 @@ class HomeActivity : BaseActivity() {
     override fun onStart() {
         super.onStart()
         testFirestore()
+        getAvatar()
+    }
+
+    private fun getAvatar(){
+        bindingAvatar.textAvatar.text = pref.getString(PrefUtil.pref_name)
+        bindingAvatar.imageAvatar.setImageResource(pref.getInt(PrefUtil.pref_avatar)!!)
     }
 
     private fun testFirestore(){

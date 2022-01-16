@@ -12,11 +12,14 @@ import com.google.firebase.ktx.Firebase
 import id.finash.R
 import id.finash.databinding.ActivityLoginBinding
 import id.finash.model.User
+import id.finash.preference.PreferencesManager
+import id.finash.util.timestampToString
 
 class LoginActivity : BaseActivity() {
 
     private val binding by lazy { ActivityLoginBinding.inflate(layoutInflater)}
     private val db by lazy { Firebase.firestore}
+    private val pref by lazy { PreferencesManager(this)}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,7 +60,8 @@ class LoginActivity : BaseActivity() {
                         )
                     }
                     Toast.makeText(applicationContext, "Login Succes", Toast.LENGTH_SHORT).show()
-
+                    startActivity(Intent(this, HomeActivity::class.java))
+                    finish()
                 }
             }
     }
@@ -85,5 +89,11 @@ class LoginActivity : BaseActivity() {
 
     private fun saveSession(user: User){
         Log.e("LoginActivity", user.toString())
+        pref.put("pref_is_login",1)
+        pref.put("pref_name",user.name)
+        pref.put("pref_username",user.username)
+        pref.put("pref_password",user.password)
+        pref.put("pref_date", timestampToString(user.created)!!)
+        if (pref.getInt("pref_avatar") == 0) pref.put("pref_avatar",R.drawable.avatar1)
     }
 }

@@ -60,11 +60,11 @@
                    app:layout_constraintEnd_toEndOf="parent"
                    app:layout_constraintTop_toBottomOf="@id/image_avatar"/>
                <TextView
-                   android:id="@+id/text_email"
+                   android:id="@+id/text_username"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginTop="10dp"
-                   tools:text="dimassatrio102@gmail.com"
+                   tools:text="dimastrio"
                    android:textColor="@color/white"
                    app:layout_constraintStart_toStartOf="parent"
                    app:layout_constraintEnd_toEndOf="parent"
@@ -144,15 +144,28 @@
                android:padding="20dp">
 
                <TextView
-                   android:id="@+id/label_about"
+                   android:id="@+id/label_date"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:text="About"
+                   android:text="Joined Since"
                    android:textColor="@color/white"
                    android:textSize="20sp"
                    android:textStyle="bold"
                    app:layout_constraintStart_toStartOf="parent"
-                   app:layout_constraintTop_toTopOf="parent"/>
+                   app:layout_constraintTop_toTopOf="parent"
+                   />
+
+               <TextView
+                   android:id="@+id/text_date"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   tools:text="Januari 2022"
+                   android:textColor="@color/white"
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   />
 
            </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -6,7 +6,7 @@ data class User (
     var name: String,
     var username: String,
     var password: String,
-    var created: Timestamp? = Timestamp.now()
+    var created: Timestamp
 
 
 )

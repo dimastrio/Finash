@@ -5,14 +5,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import id.finash.R
 import id.finash.adapter.AvatarAdapter
 import id.finash.databinding.FragmentAvatarBinding
+import id.finash.preference.PreferencesManager
+import id.finash.util.PrefUtil
 
 class AvatarFragment : Fragment() {
 
     private lateinit var binding: FragmentAvatarBinding
     private lateinit var avatarAdapter: AvatarAdapter
+
+    private val pref by lazy { PreferencesManager(requireContext()) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,7 +48,8 @@ class AvatarFragment : Fragment() {
         )
         avatarAdapter = AvatarAdapter(avatars, object : AvatarAdapter.AdapterListener {
             override fun onClick(avatar: Int) {
-
+                pref.put(PrefUtil.pref_avatar, avatar)
+                findNavController().navigateUp()
             }
 
         })
