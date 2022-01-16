@@ -11,6 +11,7 @@
     android:layout_marginBottom="4dp"
     android:textColor="@color/white"
     android:backgroundTint="@color/blue2"
+    tools:textColor="@color/white"
     tools:backgroundTint="@color/blue"
     app:cornerRadius="10dp"
     android:id="@+id/button_category"

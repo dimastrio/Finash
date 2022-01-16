@@ -40,6 +40,12 @@ class TransactionAdapter(
 
     class ViewHolder(val binding: AdapterTransactionBinding): RecyclerView.ViewHolder(binding.root)
 
+    public fun setData(data: List<Transaction>){
+        transaction.clear()
+        transaction.addAll(data)
+        notifyDataSetChanged()
+    }
+
     interface AdapterListener {
         fun onClick(transaction: Transaction)
     }
