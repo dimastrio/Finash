@@ -7,12 +7,12 @@ import id.finash.R
 import id.finash.databinding.AdapterTransactionBinding
 import id.finash.model.Transaction
 
-class TrasactionAdapter(
+class TransactionAdapter(
     var transaction: ArrayList<Transaction>,
     var listener: AdapterListener?
-    ): RecyclerView.Adapter<TrasactionAdapter.ViewHolder>() {
+    ): RecyclerView.Adapter<TransactionAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TrasactionAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransactionAdapter.ViewHolder {
         return ViewHolder(
             AdapterTransactionBinding.inflate(
                 LayoutInflater.from(parent.context), parent, false
@@ -20,7 +20,7 @@ class TrasactionAdapter(
         )
     }
 
-    override fun onBindViewHolder(holder: TrasactionAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: TransactionAdapter.ViewHolder, position: Int) {
         val transaction = transaction[position]
 
         if (transaction.type.toUpperCase() == "IN") holder.binding.imageType.setImageResource(R.drawable.ic_income)
