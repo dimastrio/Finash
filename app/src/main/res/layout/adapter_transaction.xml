@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:text="Gajian"
-        android:textSize="15sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@id/image_type"
         app:layout_constraintTop_toTopOf="parent"
         />

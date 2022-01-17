@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import id.finash.R
 import id.finash.databinding.AdapterTransactionBinding
 import id.finash.model.Transaction
+import id.finash.util.amountFormat
+import id.finash.util.timestampToString
 
 class TransactionAdapter(
     var transaction: ArrayList<Transaction>,
@@ -28,12 +30,18 @@ class TransactionAdapter(
 
         holder.binding.textNote.text = transaction.note
         holder.binding.textCategory.text = transaction.category
-        holder.binding.textAmount.text = transaction.amount.toString()
-        holder.binding.textDate.text = transaction.created.toString()
+        holder.binding.textAmount.text = amountFormat(transaction.amount)
+        holder.binding.textDate.text = timestampToString(transaction.created!!)
 
         holder.binding.container.setOnClickListener {
             listener?.onClick(transaction)
         }
+
+        holder.binding.container.setOnLongClickListener {
+            listener?.onLongClick( transaction )
+            true
+        }
+
     }
 
     override fun getItemCount() = transaction.size
@@ -48,6 +56,7 @@ class TransactionAdapter(
 
     interface AdapterListener {
         fun onClick(transaction: Transaction)
+        fun onLongClick(transaction: Transaction)
     }
 
 }

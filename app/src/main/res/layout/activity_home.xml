@@ -25,7 +25,7 @@
         app:layout_constraintTop_toBottomOf="@id/avatar" >
         <include
             android:id="@+id/include_dashboard"
-            layout="@layout/home_dashborad"/>
+            layout="@layout/home_dashboard"/>
     </FrameLayout>
 
     <TextView
@@ -64,9 +64,22 @@
         android:paddingEnd="10dp"
         tools:itemCount="6"
         tools:listitem="@layout/adapter_transaction"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/label_transaction"
         />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_transaction"
+        />
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_create"

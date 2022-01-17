@@ -60,12 +60,12 @@ class CategoryAdapter(
         buttonSelected.setBackgroundColor(ContextCompat.getColor(context, R.color.blue))
     }
 
-//    private fun setButton(category: String){
-//        listButton.forEach { button ->
-//            if (button.text.toString().contains( category )){
-//                button.setBackgroundColor(ContextCompat.getColor(context, R.color.blue))
-//            }
-//        }
-//    }
+    public fun setButton(category: String){
+        listButton.forEach { button ->
+            if (button.text.toString().contains( category )){
+                button.setBackgroundColor(ContextCompat.getColor(context, R.color.blue))
+            }
+        }
+    }
 
 }

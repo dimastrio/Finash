@@ -3,7 +3,7 @@ package id.finash.model
 import com.google.firebase.Timestamp
 
 data class Transaction (
-    var id: String,
+    var id: String?,
     var username: String,
     var category: String,
     var type: String,
